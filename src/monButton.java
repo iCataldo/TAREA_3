@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 
 public class monButton extends JPanel {
     private int m=0;
-    private JLabel contador = new JLabel("$"+m);
+    private JLabel contador = new JLabel();
     private JPanel panel = new JPanel();
     public monButton(){
         FlowLayout derecha = new FlowLayout(FlowLayout.RIGHT);
@@ -20,6 +20,8 @@ public class monButton extends JPanel {
         public void actionPerformed(ActionEvent ae) {
             m=m+100;
             System.out.println("$"+m);
+            String a = String.valueOf(m);
+            contador.setText("$"+a);
         }
     }
 }
