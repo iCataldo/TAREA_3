@@ -6,7 +6,7 @@ class Expendedor {
         PreSprite(700),
         PreSniker(500),
         PreSuper8(300);
-        private final int precio;
+        public final int precio;
         PRODUCTOS(int precio){
             this.precio=precio;
         }
