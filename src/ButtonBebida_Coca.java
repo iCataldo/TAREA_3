@@ -1,13 +1,16 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JButton;
+import javax.swing.*;
+
 public class ButtonBebida_Coca extends JButton {
 
     private Expendedor exp =new Expendedor(3);
     private Moneda mon;
     private Comprador com;
-    public ButtonBebida_Coca(Expendedor exp, monButton m){
-        super("Coca");
+    ImageIcon image;
+    public ButtonBebida_Coca(Expendedor exp, monButton m, ImageIcon image){
+        super(image);
+        this.image=image;
         this.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
