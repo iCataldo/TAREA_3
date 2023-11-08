@@ -5,7 +5,7 @@ public class PanelPrincipal extends JPanel {
     private Expendedor exp = new Expendedor(3);
     private Comprador com;
 
-    private PanelMoneda mon = new PanelMoneda();
+    private monButton mon = new monButton();
     private ButtonBeber drink = new ButtonBeber();
     private PanelMatriz pan = new PanelMatriz(exp,mon);
     public PanelPrincipal(){
