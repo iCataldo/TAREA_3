@@ -1,7 +1,7 @@
 package Gui;
-import javax.swing.ImageIcon;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JButton;
 public class ButtonBebida_Coca extends JButton {
 
     private Expendedor exp =new Expendedor(3);
