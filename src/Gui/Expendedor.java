@@ -24,6 +24,7 @@ class Expendedor {
     private Deposito snicker;
     private Deposito supe8;
     private DepositoM monVu;
+    private int precio;
 
     public Expendedor(int n) {
 
@@ -42,8 +43,6 @@ class Expendedor {
             snicker.addProducto(snickers);
             Dulce super8 = new Super8(400 + i);
             supe8.addProducto(super8);
-
-
         }
 
     }
@@ -63,7 +62,8 @@ class Expendedor {
          */
 
         if (1==tipo) {
-            vuelto = moneda.getValor() - PRODUCTOS.PreCoca.precio;
+            precio=PRODUCTOS.PreCoca.precio;
+            vuelto = moneda.getValor() - precio;
             if (0<=vuelto){
                 pro = coca.getProducto();
                 if (pro == null)  {
@@ -79,7 +79,8 @@ class Expendedor {
         En caso de que no entrege nada no cobra nada
          */
         if (2==tipo) {
-            vuelto = moneda.getValor() - PRODUCTOS.PreSprite.precio;
+            precio=PRODUCTOS.PreSprite.precio;
+            vuelto = moneda.getValor() - precio;
             if (0<=vuelto) {
                 pro = sprite.getProducto();
                 if (pro == null){
@@ -95,7 +96,8 @@ class Expendedor {
         En caso de que no entrege nada no cobra nada
          */
         if (3==tipo) {
-            vuelto = moneda.getValor() - PRODUCTOS.PreSniker.precio;
+            precio=PRODUCTOS.PreSniker.precio;
+            vuelto = moneda.getValor() - precio;
             if (0<=vuelto) {
                 pro = snicker.getProducto();
                 if (pro == null){
@@ -111,7 +113,8 @@ class Expendedor {
         En caso de que no entrege nada no cobra nada
          */
         if (4 == tipo) {
-            vuelto = moneda.getValor() - PRODUCTOS.PreSuper8.precio;
+            precio=PRODUCTOS.PreSuper8.precio;
+            vuelto = moneda.getValor() - precio;
             if (0<=vuelto) {
                 pro = supe8.getProducto();
                 if (pro == null){
@@ -132,8 +135,13 @@ class Expendedor {
         return pro;
     }
 
+
     //El vuelto se obtiene sacando de a una Moneda
     public Moneda getVuelto() {
         return monVu.getMoneda();
+    }
+
+    public int getPrecio() {
+        return precio;
     }
 }
