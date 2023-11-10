@@ -9,9 +9,9 @@ public class PanelComprador extends JPanel {
     private ButtonVuelto vuelto;
     private ButtonComprar comprar;
 
-    public PanelComprador(monButton mon){
+    public PanelComprador(monButton mon,Expendedor exp){
         vuelto= new ButtonVuelto(mon);;
-        comprar=new ButtonComprar(drink,mon);
+        comprar=new ButtonComprar(drink,mon,exp);
         this.setLayout(new FlowLayout(FlowLayout.RIGHT));
         this.add(comprar);
         this.add(vuelto);
