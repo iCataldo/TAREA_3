@@ -6,8 +6,8 @@ import java.awt.*;
 public class PanelPrincipal extends JPanel {
     private Expendedor exp = new Expendedor(3);
     private monButton mon = new monButton();
-    private PanelComprador compra = new PanelComprador(mon);
-    private PanelMatriz pan = new PanelMatriz(mon,compra);
+    private PanelComprador compra = new PanelComprador(mon,exp);
+    private PanelExpendedor pan = new PanelExpendedor(mon,compra);
     public PanelPrincipal(){
         this.setLayout(new BorderLayout());
         pan.setBackground(Color.gray);
@@ -19,3 +19,4 @@ public class PanelPrincipal extends JPanel {
     }
 
 }
+
