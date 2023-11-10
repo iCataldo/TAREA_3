@@ -31,3 +31,4 @@ public class PanelComprador extends JPanel {
     }
 
 }
+
